@@ -1,2 +1,2 @@
 <?php
-    echo 'This are git-test.php';
+    echo 'This is git-test.php';
