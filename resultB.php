@@ -56,6 +56,7 @@
 		}
 		?>
 		</form>
+		<button onclick="location.href='./search.php'">トップ画面へ戻る</button>
        		<table border='1'>
 			<tr>
 				<th>商品名</th>
@@ -77,5 +78,4 @@
 		</table>
 	</body>
 	<br>
-	<button onclick="location.href='./search.php'">トップ画面へ戻る</button>
 </html>
