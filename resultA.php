@@ -32,10 +32,26 @@
 	</head> 
 	<body>
 		<h1>検索結果</h1>
-		<form method = "post" action = "resultA.php">
+		<?php
+			if($sort == "true")
+			{
+			?>
+			<form method = "post" action = "resultA.php">
 			<button>登録日で降順にソート</button>
 			<input type = "hidden" name = "ProductsName" value = <?php echo $name;?>>
 			<input type = "hidden" name = "sort" value = "true">
+		<?php
+			}
+			else
+			{
+			?>
+			<form method = "post" action = "resultA.php">
+			<button>ソート解除</button>
+			<input type = "hidden" name = "ProductsName" value = <?php echo $name;?>>
+			<input type = "hidden" name = "sort" value = "false">
+		<?php
+		}
+		?>
 		</form>
        		<table border='1'>
 			<tr>
