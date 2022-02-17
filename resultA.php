@@ -10,7 +10,7 @@
 	}
 	else
 	{
-		$sql = "SELECT * FROM products WHERE name LIKE '%$name%' ORDER BY date DESC";
+		$sql = "SELECT * FROM products WHERE name LIKE '%$name%'";
 	}
     $result = connect_to_db($sql);
 	$row_count = $result->rowCount();
@@ -32,8 +32,10 @@
 	</head> 
 	<body>
 		<h1>検索結果</h1>
-		<input type = "hidden" name = "ProductsName" value = <?php echo $name;?>>
-		<button onclick="location.href='./resultA.php'" name = "sort" value = "true">登録日で降順にソート</button>
+		<button onclick="location.href='./resultA.php'" name = "sort" value = "true">
+			登録日で降順にソート
+			<input type = "hidden" name = "ProductsName" value = <?php echo $name;?>>
+		</button>
        		<table border='1'>
 			<tr>
 				<th>商品名</th>
