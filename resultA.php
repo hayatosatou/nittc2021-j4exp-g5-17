@@ -4,7 +4,6 @@
 	$sort = $_POST['sort'];
 	if(true == empty($name))
 		header('location:search.php');
-	$descending_order = false;
 	if($sort == "true")
 	{
 		$sql = "SELECT * FROM products WHERE name LIKE '%$name%' ORDER BY date DESC";
@@ -33,6 +32,7 @@
 	</head> 
 	<body>
 		<h1>検索結果</h1>
+		<input type = "hidden" name = "ProductsName" value = <?php $name>>
 		<button onclick="location.href='./resultA.php'" name = "sort" value = "true">登録日で降順にソート</button>
        		<table border='1'>
 			<tr>
