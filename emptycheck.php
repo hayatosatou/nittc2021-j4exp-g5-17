@@ -8,7 +8,7 @@
   $price = $_SESSION['price'];
   if(true == empty($name) || true == empty($price))
   {
-    header('location:index.php');
+    header('location:error.php');
   }
   else
   {
