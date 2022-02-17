@@ -40,7 +40,8 @@
 			?>
 			<form method = "post" action = "resultB.php">
 			<button>登録日で降順にソート</button>
-			<input type = "hidden" name = "ProductsName" value = <?php echo $name;?>>
+			<input type = "hidden" name = "MinValue" value = <?php echo $min;?>>
+			<input type = "hidden" name = "MaxValue" value = <?php echo $max;?>>
 			<input type = "hidden" name = "sort" value = "true">
 		<?php
 			}
@@ -49,7 +50,8 @@
 			?>
 			<form method = "post" action = "resultB.php">
 			<button>ソート解除</button>
-			<input type = "hidden" name = "ProductsName" value = <?php echo $name;?>>
+			<input type = "hidden" name = "MinValue" value = <?php echo $min;?>>
+			<input type = "hidden" name = "MaxValue" value = <?php echo $max;?>>
 			<input type = "hidden" name = "sort" value = "false">
 		<?php
 		}
