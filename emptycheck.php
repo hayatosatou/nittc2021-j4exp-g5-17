@@ -1,6 +1,4 @@
-﻿<!DOCTYPE html>
-<html>
-<?php
+﻿<?php
   session_start();
   $_SESSION['name'] = $_POST['name'];
   $name = $_SESSION['name'];
@@ -15,4 +13,3 @@
     header('location:confirm.php');
   }
 ?>
-</html>
