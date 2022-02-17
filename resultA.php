@@ -1,9 +1,18 @@
 ﻿<?php
 	include "connect_to_db.php";
 	$name = $_POST['ProductsName'];
+	$sort = $_POST['sort'];
 	if(true == empty($name))
 		header('location:search.php');
-	$sql = "SELECT * FROM products WHERE name LIKE '%$name%'";
+	$descending_order = false;
+	if($sort == "true")
+	{
+		$sql = "SELECT * FROM products WHERE name LIKE '%$name%' ORDER BY date DESC";
+	}
+	else
+	{
+		$sql = "SELECT * FROM products WHERE name LIKE '%$name%'";
+	}
     $result = connect_to_db($sql);
 	$row_count = $result->rowCount();
 	foreach($result as $row)
@@ -14,15 +23,16 @@
 ?>
 <!DOCTYPE html>
 <html> 
-	<head> 
+	<head>
 	<meta charset="UTF-8">
 		<title> 
-		<?php 
+		<?php
 			print("検索結果");
 		?>
 		</title> 
 	</head> 
 	<body>
+		<button onclick="location.href='./result.php'" name = "sort" value = "true">登録日で降順にソート</button>
 		<h1>検索結果</h1>
        		<table border='1'>
 			<tr>
