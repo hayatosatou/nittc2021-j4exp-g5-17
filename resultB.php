@@ -13,7 +13,6 @@
 	{
 		$sql = "SELECT * FROM products WHERE price>='%$min%' AND '%$max%'>=price";
 	}
-	$sql = "SELECT * FROM products WHERE price>=$min AND $max>=price";
     $result = connect_to_db($sql);
 	$row_count = $result->rowCount();
 	foreach($result as $row)
