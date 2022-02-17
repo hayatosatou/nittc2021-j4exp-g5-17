@@ -7,11 +7,11 @@
 		header('location:search.php');
 	if($sort == "true")
 	{
-		$sql = "SELECT * FROM products WHERE price>=$min AND $max>=price ORDER BY date DESC";
+		$sql = "SELECT * FROM products WHERE price>='%$min%' AND '%$max%'>=price ORDER BY date DESC";
 	}
 	else
 	{
-		$sql = "SELECT * FROM products WHERE price>=$min AND $max>=price";
+		$sql = "SELECT * FROM products WHERE price>='%$min%' AND '%$max%'>=price";
 	}
 	$sql = "SELECT * FROM products WHERE price>=$min AND $max>=price";
     $result = connect_to_db($sql);
