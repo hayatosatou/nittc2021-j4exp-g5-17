@@ -11,5 +11,5 @@ function connect_to_db($sql)
 		echo $e->getMessage();
 		die();
 	}
-	return;
+	return $result;
 }
