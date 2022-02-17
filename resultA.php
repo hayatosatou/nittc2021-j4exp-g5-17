@@ -33,7 +33,7 @@
 	<body>
 		<h1>検索結果</h1>
 		<?php
-			if($sort == "true")
+			if($sort != "true")
 			{
 			?>
 			<form method = "post" action = "resultA.php">
