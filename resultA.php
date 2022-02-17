@@ -32,10 +32,10 @@
 	</head> 
 	<body>
 		<h1>検索結果</h1>
-		<button onclick="location.href='./resultA.php'" name = "sort" value = "true">
-			登録日で降順にソート
+		<form method = "post" action = "resultA.php">
+			<button>登録日で降順にソート</button>
 			<input type = "hidden" name = "ProductsName" value = <?php echo $name;?>>
-		</button>
+		</form>
        		<table border='1'>
 			<tr>
 				<th>商品名</th>
