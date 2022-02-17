@@ -32,8 +32,8 @@
 		</title> 
 	</head> 
 	<body>
-		<button onclick="location.href='./result.php'" name = "sort" value = "true">登録日で降順にソート</button>
 		<h1>検索結果</h1>
+		<button onclick="location.href='./resultA.php'" name = "sort" value = "true">登録日で降順にソート</button>
        		<table border='1'>
 			<tr>
 				<th>商品名</th>
