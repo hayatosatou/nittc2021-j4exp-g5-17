@@ -26,9 +26,9 @@
 		<h1>検索結果</h1>
        		<table border='1'>
 			<tr>
-				<td>商品名</td>
-				<td>価格</td>
-				<td>登録日</td>
+				<th>商品名</th>
+				<th>価格</th>
+				<th>登録日</th>
 			</tr>
 		<?php
 			foreach($rows as $row)
@@ -36,7 +36,7 @@
 		?>
 			<tr>
 				<td><? echo $row['name'];?></td>
-				<td><? echo $row['price'];?></td>
+				<td align = "right"><? echo $row['price'];?></td>
 				<td><? echo $row['date'];?></td>
 			</tr>
 		<?php	
