@@ -35,6 +35,7 @@
 		<form method = "post" action = "resultA.php">
 			<button>登録日で降順にソート</button>
 			<input type = "hidden" name = "ProductsName" value = <?php echo $name;?>>
+			<input type = "hidden" name = "sort" value = "true">
 		</form>
        		<table border='1'>
 			<tr>
