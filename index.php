@@ -1,6 +1,3 @@
-﻿<!DOCTYPE html>
-<html>
-<?php
+﻿<?php
   header('location:search.php');   
 ?>
-</html>
