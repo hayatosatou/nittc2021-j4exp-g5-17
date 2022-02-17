@@ -10,7 +10,7 @@
 	}
 	else
 	{
-		$sql = "SELECT * FROM products WHERE name LIKE '%$name%'";
+		$sql = "SELECT * FROM products WHERE name LIKE '%$name%' ORDER BY date DESC";
 	}
     $result = connect_to_db($sql);
 	$row_count = $result->rowCount();
